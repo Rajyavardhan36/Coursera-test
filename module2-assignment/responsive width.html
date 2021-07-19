@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Responsive design</title>
+        <style>
+           *{
+               box-sizing: border-box;
+           }
+           h1{
+               text-align: center;
+               margin-bottom: 15px;
+           }
+           .row{
+               width:100%;
+               
+           }
+           .row>section{
+               float:left;
+               margin-bottom: 15px;
+               border:1px solid black;
+               height:150px;
+               font-size:18px;
+           }
+           .section1{
+               background-color: blueviolet;
+           }
+           .section2{
+               background-color: chartreuse;
+           }
+           .section3{
+               background-color: cyan;
+           }
+          
+           @media (min-width:992px){
+               .section1{
+                   width:27.78%;
+                   margin-left:2%;
+                   margin-right:6.33%;
+               }
+               .section2{
+                   width:27.78%;
+                   margin-right:6.33%;
+               }
+               .section3{
+                   width:27.78%;
+               }
+                
+            }
+            @media (min-width:768px) and (max-width:991px){
+                .section1{
+                    width:41.66%;
+                    margin-left:5%;     
+                    margin-right:6.33%;
+                    
+                }
+                .section2{
+                    width:41.66%;
+                }
+                .section3{
+                    width:89.65%;  /*41.66+41.66=83.32 and 83.32+6.33=89.65*/
+                    margin-left:5%;
+                }
+                
+              }
+            @media (max-width:767px) {
+                .section1{
+                    width:91.66%;
+                    margin-left:4.33%; /*already some margin is present by default hence i used 4.33*/
+                    
+                }
+                .section2{
+                    width:91.66%;
+                    margin-left:4.33%;
+                    
+                }
+                .section3{
+                    width:91.66%;
+                    margin-left:4.33%;
+                    
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>The three sections</h1>
+        <section class="row">
+            <section class="section1">this is the content in the section1 tag</section>
+            <section class="section2">Content inside section2 here!!!</section>
+            <section class="section3">section3 content is placed here!!!</section>
+        </section>
+    </body>
+    
+</html>
